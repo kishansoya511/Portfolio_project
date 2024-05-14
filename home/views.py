@@ -24,7 +24,7 @@ def contact(request):
         desc = request.POST['desc']
         # print(name,email,phone,desc)
         ins = Contact(name=name,email=email,phone=phone,desc=desc)
-        ins.save
+        ins.save()
         print("data has been written to the db")
     # return HttpResponse("this is my contact page (/contact)")
     return render(request,'contact.html')
